@@ -1,0 +1,28 @@
+{
+  "name": "zk-voting",
+  "version": "1.0.0",
+  "description": "Privacy-preserving decentralized voting application using ZKP and Ethereum",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "node": "hardhat node",
+    "clean": "hardhat clean"
+  },
+  "keywords": ["blockchain", "voting", "zkp", "ethereum", "semaphore"],
+  "author": "MTech Project",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.4"
+  },
+  "dependencies": {
+    "@semaphore-protocol/identity": "^3.15.2",
+    "@semaphore-protocol/group": "^3.15.2",
+    "@semaphore-protocol/proof": "^3.15.2",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.9.0",
+    "winston": "^3.11.0"
+  }
+}
