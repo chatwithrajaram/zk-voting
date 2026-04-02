@@ -63,3 +63,45 @@ Design and implement a decentralized voting system that:
 - **npm:** Package management
 - **MetaMask:** Browser wallet extension
 - **Git:** Version control
+
+## 4. Features
+
+### 4.1 Core Features
+
+| Feature | Description |
+|---------|-------------|
+| Anonymous Voting | Vote without revealing identity |
+| Double-Vote Prevention | Cryptographic nullifier mechanism |
+| Sybil Resistance | Aadhaar-based identity binding |
+| Merkle Tree Integrity | Voter list tamper detection via Merkle root |
+| Transparent Results | Real-time vote counts on blockchain |
+| Admin Controls | Manage candidates, voters, election settings |
+| Time-Bound Elections | Configurable start and end times |
+
+### 4.2 Admin Features
+
+- Add/manage candidates (before election starts)
+- Register voter commitments
+- Update Merkle root after voter registration
+- Update election name and time window
+- Activate/deactivate election
+- View registered voter count and Merkle tree status
+- Access results anytime
+
+### 4.3 Voter Features
+
+- Generate anonymous identity using Aadhaar
+- View election details and candidates
+- Cast anonymous vote
+- View results (during election + 7 days after)
+- Backup/restore identity
+
+### 4.4 Security Features
+
+- Local identity generation (never transmitted)
+- Deterministic identity from Aadhaar (Sybil resistance)
+- Nullifier-based double-vote prevention
+- Merkle tree for voter list integrity verification
+- Immutable vote records on blockchain
+- Time-restricted voting window
+- Admin-controlled election status
