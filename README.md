@@ -161,3 +161,80 @@ zk-voting/
 ├── hardhat.config.js            # Hardhat configuration
 ├── package.json                 # Backend dependencies
 └── PROJECT_REPORT.md            # This document
+
+## 6. Setup Instructions
+
+### 6.1 Prerequisites
+
+- Node.js v18 or higher
+- npm (comes with Node.js)
+- MetaMask browser extension
+- Git (for version control)
+
+### 6.2 Installation Steps
+
+**Step 1: Clone Repository**
+```bash
+git clone <repository-url>
+cd zk-voting
+```
+
+**Step 2: Install Backend Dependencies**
+```bash
+npm install
+```
+
+**Step 3: Install Frontend Dependencies**
+```bash
+cd frontend
+npm install
+cd ..
+```
+
+**Step 4: Configure Environment**
+```bash
+# Copy environment templates
+cp .env.example .env
+cp frontend/.env.example frontend/.env
+```
+
+**Step 5: Update .env (for local development)**
+```
+PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+```
+
+### 6.3 Running Locally
+
+**Terminal 1: Start Local Blockchain**
+```bash
+npm run node
+```
+This starts a local Ethereum node with 20 pre-funded test accounts.
+
+**Terminal 2: Deploy Contract**
+```bash
+npm run deploy:local
+```
+This deploys the ZKVoting contract and adds sample candidates.
+
+**Terminal 3: Start Frontend**
+```bash
+cd frontend
+npm start
+```
+Opens the application at http://localhost:3000
+
+### 6.4 MetaMask Configuration
+
+1. **Add Local Network:**
+   - Network Name: `Localhost 8545`
+   - RPC URL: `http://127.0.0.1:8545`
+   - Chain ID: `31337`
+   - Currency Symbol: `ETH`
+
+2. **Import Admin Account:**
+   - Private Key: `0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`
+   - This account has 10,000 test ETH
+
+3. **Import Test Voter Account:**
+   - Private Key: `0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d`
