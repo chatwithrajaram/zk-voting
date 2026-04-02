@@ -105,3 +105,59 @@ Design and implement a decentralized voting system that:
 - Immutable vote records on blockchain
 - Time-restricted voting window
 - Admin-controlled election status
+
+## 5. Project Structure
+
+```
+zk-voting/
+│
+├── contracts/                    # Smart Contracts
+│   └── ZKVoting.sol             # Main voting contract
+│
+├── scripts/                      # Deployment Scripts
+│   └── deploy.js                # Contract deployment
+│
+├── frontend/                     # React Application
+│   ├── public/
+│   │   └── index.html           # HTML template
+│   │
+│   ├── src/
+│   │   ├── components/          # React Components
+│   │   │   ├── AdminPanel.js    # Admin controls
+│   │   │   ├── ElectionInfo.js  # Election display
+│   │   │   ├── Header.js        # Navigation
+│   │   │   ├── IdentityPanel.js # Identity management
+│   │   │   ├── ResultsPanel.js  # Results display
+│   │   │   └── VotingPanel.js   # Voting interface
+│   │   │
+│   │   ├── services/            # Business Logic
+│   │   │   ├── IdentityService.js  # ZKP identity
+│   │   │   ├── MerkleTreeService.js # Merkle tree operations
+│   │   │   └── Web3Service.js      # Blockchain interaction
+│   │   │
+│   │   ├── config/              # Configuration
+│   │   │   ├── constants.js     # App constants
+│   │   │   └── contractABI.js   # Contract interface
+│   │   │
+│   │   ├── styles/              # Styling
+│   │   │   ├── App.css          # Component styles
+│   │   │   └── index.css        # Global styles
+│   │   │
+│   │   ├── App.js               # Main component
+│   │   └── index.js             # Entry point
+│   │
+│   ├── .env.example             # Environment template
+│   └── package.json             # Dependencies
+│
+├── utils/                        # Utilities
+│   ├── logger.js                # Logging utility
+│   └── zkpHelpers.js            # ZKP helpers
+│
+├── artifacts/                    # Compiled contracts
+├── cache/                        # Build cache
+├── logs/                         # Application logs
+│
+├── .env.example                  # Backend env template
+├── hardhat.config.js            # Hardhat configuration
+├── package.json                 # Backend dependencies
+└── PROJECT_REPORT.md            # This document
